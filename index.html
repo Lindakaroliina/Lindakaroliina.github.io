@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="description" content="Portfolio">
+<meta http-equiv="refresh" content="30">
+<!--Päivittää sivun 30s välein-->
+<meta name="author" content="Linda Oksanen">
+<meta name="keywords" content="Portfolio, design, work, application"
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Viewport skaala oikein jokaisessa laitteessa, W3: You should include the following <meta> element in all your web pages:-->
+<title>Linda Oksanen Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mediaqueries.css">
+
+<link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+<!--Tämä on väylä .css ulkoasuun-->
+
+</head>
+
+<body>
+
+    <!--<header class="header">
+        <a href="#home" class="logo">Linda<span>Oksanen</span></a>
+
+        <i class='bx  bx-menu' id="menu-icon"></i>--> 
+
+<!-- NAVBAR-->
+
+<!--Desktop navigation-->
+        <nav class="desktop-nav">
+            <div class="logo">Linda Oksanen</div>
+            <ul class="nav-links">
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#About me">About me</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact me">Contact me</a></li>
+        </ul>
+        </nav>
+
+<!--Mobile navigation-->
+        <nav class="hamburger-nav">
+            <!--<div class="menu-icon">&#9776;</div>-->
+            <div class="logo">Linda Oksanen</div>
+            <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+            <li><a href="#CV" onclick="toggleMenu()">CV</a></li>
+            <li><a href="#About me" onclick="toggleMenu()">About me</a></li>
+            <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#Contact me" onclick="toggleMenu()">Contact me</a></li>
+        </ul>
+        </div>
+        </nav>
+        
+
+        <!--Section 1: Hero-->
+        <section></section>
+
+        <!--Section 2: Skills-->
+        <section id="skills"></section>
+
+         <!--Section 3: About me-->
+        <section id="about me"></section>
+
+         <!--Section 4: Contact me-->
+        <section id=" contact me"></section>
+
+  <!----</header>-->
+
+
+<script src="script.js"></script>
+<!-- Js väylä tulee aina bodyn alle-->
+</body>
+
+
+
+</html>
