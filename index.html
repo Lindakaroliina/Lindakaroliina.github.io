@@ -2,14 +2,15 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="description" content="Portfolio">
-<meta http-equiv="refresh" content="30">
+<meta http-equiv="refresh" content="160s">
+
 <!--Päivittää sivun 30s välein-->
 <meta name="author" content="Linda Oksanen">
-<meta name="keywords" content="Portfolio, design, work, application"
+<meta name="keywords" content="Portfolio, design, work, application">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!--Viewport skaala oikein jokaisessa laitteessa, W3: You should include the following <meta> element in all your web pages:-->
 <title>Linda Oksanen Portfolio</title>
 <link rel="stylesheet" href="style.css">
@@ -18,23 +19,38 @@
 <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 <!--Tämä on väylä .css ulkoasuun-->
 
+<!--fontti-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Italiana&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+     
+    <!--Tämä on salasana koodi sivulle pääsyyn-->
+    <div id="login">
+        <h3>Syötä salasana</h3>
+         <input id="pw" type="password" placeholder="Salasana">
+         <button id="openBtn">Ok</button>
+         <p class="err" id="error"></p>
+    </div>
 
-    <!--<header class="header">
-        <a href="#home" class="logo">Linda<span>Oksanen</span></a>
-
-        <i class='bx  bx-menu' id="menu-icon"></i>--> 
 
 <!-- NAVBAR-->
 
 <!--Desktop navigation-->
+
+<header class="header" id="home">
         <nav class="desktop-nav">
-            <div class="logo">Linda Oksanen</div>
+            <a href="#home" class="logo">Linda Oksanen</a>
             <ul class="nav-links">
             <li><a href="#Experience">Experience</a></li>
-            <li><a href="#About me">About me</a></li>
+            <li><a href="#about-me">About me</a></li>
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Contact me">Contact me</a></li>
         </ul>
@@ -43,7 +59,7 @@
 <!--Mobile navigation-->
         <nav class="hamburger-nav">
             <!--<div class="menu-icon">&#9776;</div>-->
-            <div class="logo">Linda Oksanen</div>
+            <a href="#home" class="logo">Linda Oksanen</a>
             <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -52,29 +68,88 @@
             </div>
             <ul class="menu-links">
             <li><a href="#CV" onclick="toggleMenu()">CV</a></li>
-            <li><a href="#About me" onclick="toggleMenu()">About me</a></li>
+            <li><a href="#about-me" onclick="toggleMenu()">About me</a></li>
             <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
             <li><a href="#Contact me" onclick="toggleMenu()">Contact me</a></li>
         </ul>
         </div>
         </nav>
         
+</header>
+  
 
-        <!--Section 1: Hero-->
-        <section></section>
+  <section id="start" class="section1">
+  <div class="section-content1">
+    <p class="title-start">Linda Oksanen</h2>
+    <p class="introduction-title">Kehittyvä digitaalisten palveluiden ja käyttäjäkokemuksen osaaja</p>
 
-        <!--Section 2: Skills-->
-        <section id="skills"></section>
 
-         <!--Section 3: About me-->
-        <section id="about me"></section>
+</div>
+</section>
 
-         <!--Section 4: Contact me-->
-        <section id=" contact me"></section>
+<!--Tämä osio on lyhyt esittely sivuilleni-->
 
-  <!----</header>-->
+<section id="about-me" class="section">
+  <div class="section-content">
+    <p class="introduction-text">Minulla on tausta asiakaspalvelussa, digitaalisessa sisällössä ja verkkopalveluiden kehittämisessä. Olen työskennellyt junior web editorina sekä asiakaspalvelun ja verkkokaupan parissa, ja opiskelen parhaillani sosiaalipsykologiaa, pääaineena työpsykologia ja tietojenkäsittely.
+    </p>
 
-  <p>moikka moi</p>
+    <p class="introduction-text">Kiinnostukseni kohdistuu siihen, miten digitaaliset palvelut rakentuvat käyttäjän näkökulmasta – selkeästi, toimivasti ja inhimillisesti.
+    </p>
+
+</div>
+</section>
+
+<!--Tämä osio antaa tarkemman kuvauksen minusta tekijänä-->
+<section id="minusta">
+<div class="minusta">
+<h2 class="minusta-title">Minusta</h2>
+
+<p class="minusta-text">Asiakaspalvelu on ollut tärkeä osa ammatillista kasvua: se on opettanut minulle, miten käyttäjät kokevat palvelut arjessa ja milloin jokin ei toimi niin kuin pitäisi. Työskentely verkkokaupan ja vähittäismyynnin asiakaspalvelussa on kehittänyt kykyäni kuunnella, priorisoida ja ratkaista ongelmia käyttäjälähtöisesti.</p>
+
+<p class="minusta-text">Junior web editorina olen osallistunut verkkosivujen sisällön, rakenteen ja asiakaskokemuksen kehittämiseen. Työhöni on kuulunut sisällöntuotantoa, B2B-asiakaspalvelua, uutiskirjeitä sekä sosiaalisen median ja intran sisällöllistä suunnittelua, mikä on vahvistanut ymmärrystäni digipalveluiden kokonaisuudesta.</p>
+
+<p class="minusta-text">Opintoni sosiaalipsykologiassa tukevat ymmärrystäni ihmisten, työn ja teknologian välisestä vuorovaikutuksesta. Etsin roolia, jossa voin hyödyntää viestintä-, organisointi- ja digitaalista osaamistani ja kehittyä edelleen monipuolisissa työtehtävissä.</p>
+</div>
+</section>
+
+
+<!--Tämä osio on oman osaamisen, vahvuuksien ja taitojen kohta-->
+<section class="osaaminen">
+    <h2 class="skills-title">Osaaminen</h2>
+    <p class="skills-text"></p>
+        <ul class="skills-list">
+            <li>UX-suunnittelu ja käyttäjätestaus</li>
+            <li>Prototypointi (Figma, Adobe XD)</li>
+            <li>Frontend-kehitys: HTML, CSS, JavaScript</li>
+            <li>Projektinhallinta ja tiimityö</li>
+            <li>Viestintä ja esitystaidot</li>
+        </ul>
+        
+</section>
+
+
+<!-- Tämä on omien projektien ja kokemuksen kohta-->
+<section class="projektit">
+    <h2 class="projects-title">Projektit/ Kokemus</h2>
+<p class="projects-text"></p>
+</section>
+
+
+<!--Yhteystietoni ja yhteydenotto-->
+<section class="contact">
+    <h2 class="contact-title">Ota yhteyttä!</h2>
+    <p class="contact-text">Tehdään yhdessä töitä.</p>
+    <ul class="contact-list">
+        <li>Sähköposti</li>
+        <li>Instagram</li>
+        <!--CTA: ota yhteyttä tähän-->
+    </ul>
+</section>
+
+
+
+<!--Footer-->
 
 <script src="script.js"></script>
 <!-- Js väylä tulee aina bodyn alle-->
