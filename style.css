@@ -580,7 +580,7 @@ margin-left: 1.5em;;
     .esittely-kuva {
     width: 100%;
     max-width: 450px;
-    height: 600px; 
+    height: auto; 
     object-fit: cover; /* Varmistaa ettei kuva veny oudosti */
     border-radius: 10px !important;
     overflow: hidden;
@@ -588,4 +588,4 @@ margin-left: 1.5em;;
     margin: 5px auto;
     margin-top: 80px !important;
     image-rendering: auto;
-    /*filter: contrast(120%) sepia(60%) hue-rotate(290deg) saturate(120%) brightness(100%) saturate(60%);*/
+    /* filter: contrast(120%) sepia(60%) hue-rotate(290deg) saturate(120%) brightness(100%) saturate(60%); */
