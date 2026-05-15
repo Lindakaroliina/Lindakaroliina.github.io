@@ -91,4 +91,9 @@
     .login{
        width: 90%; 
     }
+
+    .esittely-kuva{
+        margin-top: 30px !important;
+        max-width: 320px;
+    }
 }
