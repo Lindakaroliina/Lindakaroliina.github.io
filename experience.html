@@ -32,27 +32,16 @@
 
 <body>
      
-    <!--Tämä on salasana koodi sivulle pääsyyn-->
-    <div id="login">
-        <h3>Syötä salasana</h3>
-        <div class="input-wrapper">
-         <input id="pw" type="password" placeholder="Salasana">
-         <span id="togglePw">katso</span>
-         </div>
-         <button id="openBtn">Ok</button>
-         <p class="err" id="error"></p>
-    </div>
 
-<div id="content">
 <!-- NAVBAR-->
 
 <!--Desktop navigation-->
 
 <header class="header" id="home">
         <nav class="desktop-nav">
-            <a href="#home" class="logo">LO</a>
+            <a href="index.html" class="logo">LO</a>
             <ul class="nav-links">
-            <li><a href="experience.html">CV</a></li>
+            <li><a href="#Experience">CV</a></li>
             <li><a href="aboutme.html">About me</a></li>
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Contact me">Contact me</a></li>
@@ -79,48 +68,65 @@
         </nav>
         
 </header>
+
+
   
-<!--Etusivu-->
-  <section id="start" class="section1">
-  <div class="section-content1">
-    <p class="title-start">Linda Oksanen</p>
-    <p class="introduction-title">Käyttäjäsuunnittelu | Design | Asiakaspalvelu |  </p>
-    <p class="introduction-title"> Empatia | Haaveilija | Luova | Neulonta </p>
-
-
-</div>
-</section>
-
-<!--Esittely-->
-
-<section id="about-me" class="section">
-  <div class="section-content">
-    <h2 id="otsikko-section">About</h2>
-    <p class="introduction-text">Olen digitaalisen sisällön ja asiakaspalvelun ammattilainen, joka opiskelee parhaillaan työpsykologiaa ja tietojenkäsittelyä rakentaakseen entistä inhimillisempiä ja toimivampia verkkopalveluita.</p>
-    <img src="mina1.PNG" alt="Kuvassa on minä nyt vasemmalla ja oikealla nuori mina" class="esittely-kuva"> 
-</div>
-
-</section>
-
 <!--Kokemus-->
 
 <section id="experience" class="section-time">
   <div class="timeline">
 
-<h2 class="mobile-label">Työkokemus</h2>
 
-<div class="container-left">
-    <h2 class="mobile-label"></h2>
+    <div class="container-left">
      <div class="dot"></div>
      <div class="timeline-content">
-        <h2 class="toggle-work">Itä-Suomen Yliopisto <span class="arrow"></span></h2>
-        <small>2023-</small>
-        <p>Yhteiskuntatieteet | Sosiaalipsykologia</p>
+        <h2 class="toggle-work">Lahden muotoiluinstituutti <span class="arrow"></span></h2>
+        <small>2017-2021</small>
+        <p>Teollisuus-ja brändimuotoilu</p>
+    </div>
+</div>
+
+    <div class="container-right">
+     <div class="dot"></div>
+     <div class="timeline-content">
+        <h2 class="toggle-work">Asiakaspalvelija <span class="arrow"></span></h2>
+        <small>10/2023 -</small>
+        <p>Alko</p>
+        <br>
+         <div class="text-box-work">
+          <ul>
+            <li>Asiakaspalvelu</li>
+            
+            <li>Tuotteiden esillepano</li>
+            
+            <li>Tilausten tekeminen</li>
+          
+            <li>Rahankäsittely</li>
+           
+            <li>Varaston hallinta</li>
+        </ul> 
+        </div>
+    </div>
+   
+</div>
+
+    <div class="container-right">
+     <div class="dot"></div>
+     <div class="timeline-content">
+        <h2 class="toggle-work">Junior Web Editor<span class="arrow"></span></h2>
+        <small>02/2022 - 02/2023</small>
+        <p>RPT Byggfakta Oy/ Academic Work</p>
+        
         <br>
         <div class="text-box-work">
           <ul>
-            <li>Sivuaineet: Työhyvinvointipsykologia ja tietojenkäsittely</li>
-            
+            <li>Sisällön tuottaminen Rakennusfakta.fi  ja RPT.fi sivuille.</li>
+            <br>
+            <li>B2B -asiakaspalvelu: Asiakkaiden tilausten hallinta ja laskuttaminen, yhteydenpito asiakkaisiin</li>
+            <br>
+            <li>Asiakkaiden sähköposti kampanjoiden luonti sekä Rakennusfakta.fi uutiskirjeen luominen ja hallinta.</li>
+            <br>
+            <li>Sosiaalisen median strategian sekä aikataulutuksen suunnittelu.</li>
         </ul> 
         </div>
     </div>
@@ -151,9 +157,19 @@
    
 </div>
 
-    <div class="container-right">
+ <div class="container-left">
      <div class="dot"></div>
-         <div class="timeline-content">
+     <div class="timeline-content">
+        <h2 class="toggle-work">Itä-Suomen Yliopisto <span class="arrow"></span></h2>
+        <small>2023-</small>
+        <p>Yhteiskuntatieteet | Sosiaalipsykologia</p>
+    </div>
+   
+</div>
+
+ <div class="container-right">
+     <div class="dot"></div>
+     <div class="timeline-content">
         <h2 class="toggle-work">Customer Care Specialist <span class="arrow"></span></h2>
         <small>05/2024 - 12/2025</small>
         <p>Nanso</p>
@@ -173,63 +189,6 @@
    
 </div>
 
- <div class="container-right">
-     <div class="dot"></div>
-       <div class="timeline-content">
-        <h2 class="toggle-work">Junior Web Editor<span class="arrow"></span></h2>
-        <small>02/2022 - 02/2023</small>
-        <p>RPT Byggfakta Oy/ Academic Work</p>
-        
-        <br>
-        <div class="text-box-work">
-          <ul>
-            <li>Sisällön tuottaminen Rakennusfakta.fi  ja RPT.fi sivuille.</li>
-            <br>
-            <li>B2B -asiakaspalvelu: Asiakkaiden tilausten hallinta ja laskuttaminen, yhteydenpito asiakkaisiin</li>
-            <br>
-            <li>Asiakkaiden sähköposti kampanjoiden luonti sekä Rakennusfakta.fi uutiskirjeen luominen ja hallinta.</li>
-            <br>
-            <li>Sosiaalisen median strategian sekä aikataulutuksen suunnittelu.</li>
-        </ul> 
-        </div>
-   
-</div>
-
-</div>
-
- <div class="container-left">
-        <h2 class="mobile-label">Koulutus</h2>
-     <div class="dot"></div>
-     <div class="timeline-content">
-        <h2 class="toggle-work">Lahden muotoiluinstituutti <span class="arrow"></span></h2>
-        <small>2017-2021</small>
-        <p>Teollisuus-ja brändimuotoilu</p>
-    </div>
-</div>
-
-    <div class="container-right">
-     <div class="dot"></div>
-     <div class="timeline-content">
-        <h2 class="toggle-work">Asiakaspalvelija <span class="arrow"></span></h2>
-        <small>2016 - 2020 -</small>
-        <p>Alko</p>
-        <br>
-         <div class="text-box-work">
-            <p>Osa-aikaisuus opiskeluiden ohessa</p>
-          <ul>
-            <li>Asiakaspalvelu</li>
-            
-            <li>Tuotteiden esillepano</li>
-            
-            <li>Tilausten tekeminen</li>
-          
-            <li>Rahankäsittely</li>
-           
-            <li>Varaston hallinta</li>
-        </ul> 
-        </div>
-    </div>
-   
 </div>
 
 </section>
@@ -256,58 +215,12 @@
 </div>
 </section>
 
-
-
-
-<!--Osaaminen-->
-<section id="skills" class="section">
-  <div class="skills-content">
-    <p class="skills-text">Minulla on tausta asiakaspalvelussa, digitaalisessa sisällössä ja verkkopalveluiden kehittämisessä. Olen työskennellyt junior web editorina sekä asiakaspalvelun ja verkkokaupan parissa, ja opiskelen parhaillani sosiaalipsykologiaa, pääaineena työpsykologia ja tietojenkäsittely.
-    </p>
-
-    <p class="skills-text"></p>
-       <ul class="skills-list">
-            <li>UX-suunnittelu ja käyttäjätestaus</li>
-            <li>Prototypointi (Figma, Adobe XD)</li>
-            <li>Frontend-kehitys: HTML, CSS, JavaScript</li>
-            <li>Projektinhallinta ja tiimityö</li>
-            <li>Viestintä ja esitystaidot</li>
-        </ul>
-        
-</div>
-</section>
-
-<!-- Tämä on omien projektien ja kokemuksen kohta-->
-<section class="projektit">
-    <h2 class="projects-title">Projektit/ Kokemus</h2>
-<p class="projects-text"></p>
-</section>
-
-
-<!--Yhteystietoni ja yhteydenotto-->
-<section class="contact">
-    <h2 class="contact-title">Ota yhteyttä!</h2>
-    <p class="contact-text">Tehdään yhdessä töitä.</p>
-    <ul class="contact-list">
-        <li>Sähköposti</li>
-        <li>Instagram</li>
-        <!--CTA: ota yhteyttä tähän-->
-    </ul>
-</section>
-
-
-
 <!--Footer-->
-
- <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="script.js"></script>
-<script src="login.js"></script>
 <!-- Js väylä tulee aina bodyn alle-->
- </div>
-
 </body>
 
-<!--<img src="pilkut.jpg" class="dots-bg" alt="mustia pilkkuja">-->
 
 
 </html>

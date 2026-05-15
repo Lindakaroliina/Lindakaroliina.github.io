@@ -8,48 +8,52 @@ const menu = document.querySelector(".menu-links");
 
 }
 
-// Vaihda tähän oma salasana
 
-const PASSWORD = "Linda2025";
+// Tämä on toiminta, joka vaikuttaa cv kohdan tekstiboksin esiintymiseen ja piilottamiseen
 
-// Funktio joka tarkistaa salasanan
+//Etsitään otsikko, jota klikataan
+const toggleHeaders= document.querySelectorAll('.toggle-work');
 
-function checkPw() {
-    const pw = document.getElementById("pw").value;
+toggleHeaders.forEach(header => {
+header.addEventListener('click', function(){
+    const parent= this.closest('.timeline-content');
+    parent.classList.toggle('active');
+   }); 
+});
 
-    if (pw===PASSWORD) {
-        //Tallennetaan  tieto, että ei häitä ulos (sessionStorage)
-        sessionStorage.setItem("portfolio_auth", "1");
 
-        // Näytetään sisältö ja piilotetaan login
-        document.getElementById("login").style.display = "none";
-        document.getElementById("content").style.display = "block";
-    }
-
-    else {
-        document.getElementById("err").innerText = "Väärä salasana";
-    }
-    }
-    
-    //Kuunnellaan buttonia kun klikataan
-document.getElementById("openBtn").addEventListener("click", checkPw);
-
-// Kuunnellaan Enter näppäintä
-    document.getElementById("pw").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            event.preventDefault(); //Estää lomakkeen lähetyksen
-            checkPw(); // kutsuu samaa funktiota kuin button
+// Tämä koodi on timelinen Scroll reveal
+const observer= new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            //kun elementti tulee esiin lisätään show-luokka
+            entry.target.classList.add('show');
         }
-    }
-);
+    });
+}, {
+    threshold:0.6
+});
 
-if (sessionStorage.getItem("portfolio_auth") === "1") {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("content").style.display = "block";
+const timelineItems = document.querySelectorAll('.container-left, .container-right');
+
+timelineItems.forEach((item) => {
+    observer.observe(item);
+});
+
+//TUTUSTU TARKEMMIN
+// Alustetaan Lenis
+
+console.log("Lenis-testi");
+
+const lenis = new Lenis({
+  lerp: 0.08,   // Kuinka kauan rullaus liukuu (sekunteina)
+  smoothWheel: true  // Aktivoi hiiren rullan pehmennyksen
+});
+
+// Pidetään rullaus käynnissä jokaisessa ruudunpäivityksessä
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
 }
 
-// Valinnainen uloskirjautumisfunktio
-function logout() {
-    sessionStorage.removeItem("portfolio_auth");
-    location.reload(); //päivittää sivun
-}
+requestAnimationFrame(raf);
