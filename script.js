@@ -1,12 +1,45 @@
+// Alustetaan lenis
+const lenis = new Lenis ({
+    lerp:0.08, // rullauksen liukuaika
+    smoothWheel: true // Aktivoi hiiren pehmennyksen rullauksessa
+});
+
+//Rullaus pidetään käynnissä ruudunpäivityksissä
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 
 // Tämä on menu näkymä kun leveys pienenee
 function toggleMenu(){
 const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
+    if (menu && icon) {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 
 }
+}
+
+// Tämä on nuoli, joka seuraa sivun laidassa ja tästä päästään takaisin sivun etusivulle
+const scrolltopbtn = document.getElementById('scrolltopbtn');
+
+if (scrolltopbtn) {
+    lenis.on('scroll', (e) => {
+    if (e.scroll > 100) {
+        scrolltopbtn.classList.add('show');
+    } else {
+        scrolltopbtn.classList.remove('show');
+    }
+    });
+//Rullaa takaisin ylös klikatessa
+    scrolltopbtn.addEventListener('click', () => {
+       lenis.scrollTo(0);
+    });
+}
+
 
 
 // Tämä on toiminta, joka vaikuttaa cv kohdan tekstiboksin esiintymiseen ja piilottamiseen
@@ -40,20 +73,3 @@ timelineItems.forEach((item) => {
     observer.observe(item);
 });
 
-//TUTUSTU TARKEMMIN
-// Alustetaan Lenis
-
-console.log("Lenis-testi");
-
-const lenis = new Lenis({
-  lerp: 0.08,   // Kuinka kauan rullaus liukuu (sekunteina)
-  smoothWheel: true  // Aktivoi hiiren rullan pehmennyksen
-});
-
-// Pidetään rullaus käynnissä jokaisessa ruudunpäivityksessä
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
