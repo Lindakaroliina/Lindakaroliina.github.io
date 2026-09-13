@@ -14,13 +14,13 @@
 
 @keyframes color {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
      50%{
-        background-position: 100% 50%;
+        background-position: 100% 0%;
     }
      100%{
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
 }
 
@@ -92,8 +92,43 @@
        width: 90%; 
     }
 
-    .esittely-kuva{
-        margin-top: 30px !important;
-        max-width: 320px;
+    .section-content {
+        flex-direction: column;
+        text-align: center;
     }
+
+    .esittely-kuva {
+        order: -1;
+        margin: 30px auto 0 auto !important;
+        max-width: 280px;
+    }
+    .about-text {
+        order: 1;
+        width: 100%;
+    }
+
+    .introduction-text {
+       font-size: clamp(1.4rem, 2vw, 4.8rem);
+    }
+
+    .section-projects {
+        height: auto !important;
+        padding: 60px 20px;
+}
+
+    .projects-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap:25px;
+}
+
+    .project-card {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+}
+
+
 }
