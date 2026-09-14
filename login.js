@@ -1,6 +1,6 @@
 // Vaihda tähän oma salasana
 
-const PASSWORD = "LindaOksanen2026";
+const PASSWORD = "Linda2026";
 
 // Funktio joka tarkistaa salasanan
 
