@@ -73,3 +73,55 @@ timelineItems.forEach((item) => {
     observer.observe(item);
 });
 
+// Tämä on geministä otettu js pätkä jolla sähköposti ominaisuus toimii! tutustu tarkemmin!
+
+
+document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const submitBtn = document.getElementById('submitBtn');
+  const formStatus = document.getElementById('formStatus');
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Lähetetään...';
+  
+  if (formStatus) {
+    formStatus.style.color = '#94a3b8'; // Harmaa latausteksti
+    formStatus.textContent = 'Lähetetään viestiä...';
+  }
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: new FormData(form)
+  })
+  .then(async (response) => {
+    let json = await response.json();
+    if (response.status == 200) {
+      if (formStatus) {
+        formStatus.style.fontSize = '1.6rem';
+        formStatus.style.color = '#102317'; // Kirkas vihreä onnistumiselle
+        formStatus.textContent = ' Viestin lähetys onnistui!';
+      }
+      form.reset();
+    } else {
+      if (formStatus) {
+        formStatus.style.color = '#f87171'; // Kirkas punainen virheelle
+        formStatus.textContent = json.message || 'Jotain meni vikaan.';
+      }
+    }
+  })
+  .catch(error => {
+    if (formStatus) {
+      formStatus.style.color = '#f87171';
+      formStatus.textContent = 'Verkkovirhe. Yritä uudelleen.';
+    }
+  })
+  .then(() => {
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Lähetä viesti';
+      if (formStatus) formStatus.textContent = '';
+    }, 5000); // Nostin ajan 5 sekuntiin, jotta käyttäjä ehtii varmasti lukea ilmoituksen
+  });
+});

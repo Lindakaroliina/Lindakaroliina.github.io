@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Portfolio">
+<meta http-equiv="refresh" content="160s">
+
+<!--Päivittää sivun 30s välein-->
+<meta name="author" content="Linda Oksanen">
+<meta name="keywords" content="Portfolio, design, work, application">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Viewport skaala oikein jokaisessa laitteessa, W3: You should include the following <meta> element in all your web pages:-->
+<title>Linda Oksanen Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mediaqueries.css">
+
+<link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+<!--Tämä on väylä .css ulkoasuun-->
+
+<!--fontti-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!--Desktop navigation-->
+
+<header class="header" id="home">
+        <nav class="desktop-nav">
+            <a href="index.html" class="logo">LO</a>
+            <ul class="nav-links">
+            <li><a href="index.html">Etusivu</a></li>
+            
+        </ul>
+        </nav>
+
+<!--Mobile navigation-->
+        <nav class="hamburger-nav">
+            <!--<div class="menu-icon">&#9776;</div>-->
+            <a href="#home" class="logo">LO</a>
+            <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+            <li><a href="#CV" onclick="toggleMenu()">CV</a></li>
+            <li><a href="#about-me" onclick="toggleMenu()">About me</a></li>
+            <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#Contact me" onclick="toggleMenu()">Contact me</a></li>
+        </ul>
+        </div>
+        </nav>
+        
+</header>
+<section id="about-me" class="section">
+  <div class="section-content">
+
+    
+
+    <div class="about-hero">
+    <div class="about-text">
+        <h2 id="otsikko-section">Tekoälyn hyödyntäminen sivustolla</h2>
+        <div class="skills-section">
+    
+        <div class="skills1-container">
+            <span class="skill-tag1">Adobe Indesign</span>
+            <span class="skill-tag1">Adobe Photoshop</span>
+            <span class="skill-tag1">Adobe Illustration</span>
+            <span class="skill-tag1">Figma</span>
+        </div>
+    </div>
+            <p class="introduction-text">Olen digitaalisen sisällön ja asiakaspalvelun ammattilainen, joka opiskelee parhaillaan sosiaalipsykologiaa sekä sivuaineina työhyvinvointipsykologiaa ja tietojenkäsittelyä. Tavoitteenani on rakentaa entistä inhimillisempiä, saavutettavampia ja toimivampia verkkopalveluita. </p>
+            <p class="introduction-text">Innostun aidoista kohtaamisista, saumattoman palvelukokemuksen luomisesta ja ongelmanratkaisusta. Haluan päästä työskentelemään inspiroivassa ja merkityksellisessä ympäristössä, jossa pystyn osallistumaan ja vaikuttamaan. Pidän niin tiimityöstä kuin rutiininomaisesta yksintyöskentelystä, enkä pelkää tarttua haasteisiin. Otan oppia mielelläni myös itseäni kokeneemmilta kehittääkseni omaa työskentelyäni entistä paremmaksi. </p>
+            <p class="introduction-text">Minulta kysytään usein: “Mikä sinusta tulee isona?” Tähän vastaan nykyään, että tutkija. En halua laittaa itseäni lokeroon, vaan haluan tutkia ja innostua laajasti eri asioista.  </p>    
+            <p class="introduction-text">Työskentelyni tukipilareita ovat tasa-arvo, oikeudenmukaisuus ja empatia. Haluan toiminnallani luoda positiivista, innovatiivista ja tasa-arvoista maailmaa kaikille. Se ei tarkoita, että pyörä pitäisi keksiä uudestaan, vaan uskon kuuntelemisen ja havainnoinnin voimaan, joilla pienilläkin teoilla voidaan tehdä iso vaikutus. Minusta saat tiimiisi sitoutuneen, empaattisen ja kehityshakuisen tekijän.  </p>    
+    </div>
+    </div>
+</div>
+
+</div>
+</section>
+
+
+
+<button id="scrolltopbtn" title="Takaisin ylös" aria-label="Takaisin ylös">↑</button>
+<!-- Huom! aria-label on saavutettavuus työkalu, tätä hyösyntää esim. ruudunlukijalaitteet, joten tekstin tulee olla tarkka ja selkeä kuvaus.
+ title puolestaan parantaa käyttökokemusta, kun käyttäjä vie hiiren (nuolen) päälle niin hiiren yläpuolelle ilmestyy teksti. Tässä sama periaate kuin aria-labelissa --> 
+</div>
+
+
+ <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>

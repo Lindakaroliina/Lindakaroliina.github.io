@@ -21,7 +21,9 @@ html {
 
 
 body {
-    font-family: 'Fira Mono', monospace;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     color: #170910;
     font-weight: 400;
     font-size: 20px;
@@ -93,11 +95,10 @@ font-weight: 500;
 }
 
 .introduction-text{
-    font-size: clamp(1.6rem, 2vw, 2.0rem);
+    font-size: clamp(1.8rem, 2vw, 1.4rem);
     text-align: start;
     margin-top: 0px;
     margin-bottom: 1.5rem;
-    font-size: 20px;
     flex: 1;
 }
 
@@ -401,7 +402,6 @@ border-radius: 8px;
 }
 
 
-
 .skills-list {
 list-style: disc;
 margin-left: 1.5em;;
@@ -415,12 +415,12 @@ margin-left: 1.5em;;
         rgba(255, 251, 247, 0.636) 85%,
         rgba(255, 251, 247, 0.636) 100%
     );
-    width: 100vw;
+    width: 100%;
     min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 40px 0;
     text-align: center;
     /* position: relative;
     overflow: hidden;*/
@@ -430,6 +430,8 @@ margin-left: 1.5em;;
 
 
 .section-content {
+     background-color: rgba(255, 255, 255, 0.544);
+    width: 100vw;
     max-width: 1600px;
     margin: 0 auto;
     padding: clamp(20px, 4vw, 60px) ;
@@ -441,6 +443,9 @@ margin-left: 1.5em;;
     gap: 40px;
     text-align: left;
   /* z-index: 2;*/
+ 
+    
+    
     
 }
 
@@ -538,13 +543,45 @@ margin-left: 1.5em;;
     font-weight: 500;
     border: 1px #fdc3f7;
     transition: transform 0.2 ease, background-color 0.2s ease;
-    cursor: pointer;
+    cursor: default;
 }
 
 .skill-tag:hover {
-    background-color: #fdfbfd67;
+    background-color: #ffffff47;
+    border: 2px solid  #ffb41dc7;
+        border-radius: 7px;
     transform: translateY(-2px);
 }
+
+/*Tekoäly sivusto*/
+.skills1-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 6rem;
+   
+}
+
+.skill-tag1 {
+  background-color: #c48ac7a2;
+    color: #170910;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 1px #fdc3f7;
+    transition: transform 0.2 ease, background-color 0.2s ease;
+    cursor: default;
+     
+}
+
+.skill-tag1:hover {
+    background-color: #ffffff47;
+    border: 2px solid  #ffb41dc7;
+        border-radius: 7px;
+    transform: translateY(-2px);
+}
+
 
 /* tämä on timeline*/
 
@@ -620,10 +657,10 @@ margin-left: 1.5em;;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3px solid rgba(255, 255, 255, 0.864);
     box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(115, 128, 246, 0.5);
-    background-color: #7a6efbea;
+    box-shadow: 0 0 10px rgb(211, 115, 246);
+    background-color: #ffb41d;
     z-index: 3;
 }
 
@@ -645,7 +682,7 @@ margin-left: 1.5em;;
     background-color: #fdfbfd;
     padding: 20px 30px;
     border-radius: 6px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     word-wrap: break-word;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
@@ -721,7 +758,7 @@ margin-left: 1.5em;;
     }
 
     .section-projects {
-    background-color: rgba(255, 255, 255, 0.544);
+    background-color: rgba(255, 255, 255, 0.568);
            width: 100vw;
     height: 60vh;
     display: flex;
@@ -791,13 +828,149 @@ margin-left: 1.5em;;
     }
 
     /* Ota yhteyttä osio*/
-    .contact {
-         background-color: rgba(255, 255, 255, 0.544);
-           width: 100vw;
-    height: 60vh;
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        max-width: 700px;
+        margin: 1.5rem auto 0 auto; /* Poista auto jos halutaan vasemmalle*/
+        text-align: left;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    #name,
+    #email,
+    #message {
+background-color: rgba(255, 255, 255, 0.064);
+    }
+
+    .form-group label {
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem 0;
+        border: none;
+        border-bottom: solid #c48ac7;
+        border-radius: 4px;
+        font-size: 1.4rem;
+        outline: none;
+        resize: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #c69fc8;
+        box-shadow: 0 0 0 2px rgba(170, 171, 171, 0.2);
+    }
+
+    .submit-btn{
+        padding: 0.9rem;
+        background-color: #b472b8;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        font-family: "DM Sans", sans-serif;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .submit-btn:hover {
+        background-color: #68426a;
+
+    }
+
+    .form-status {
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        text-align: center;
+    }
+
+    /*footer*/
+
+    .footer-section {
+    background-color: linear-gradient(
+        to bottom,
+        rgba(255, 251, 247, 0.636) 0%,
+        rgba(255, 251, 247, 0.636) 15%,
+        rgba(255, 251, 247, 0.636) 85%,
+        rgba(255, 251, 247, 0.636) 100%
+    );
+
+    max-width: 100%;
+    margin-top: auto;
+
+    min-height: 30vh;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding-top: 10px ;
     text-align: center;
+    /* position: relative;
+    overflow: hidden;*/
+    
+}
+
+    .footer-content {
+     background-color: rgba(255, 255, 255, 0.544);
+    width: 100%;
+    margin: 0 auto;
+
+    padding: clamp(60px, 8vw, 140px) ;
+    font-size: clamp(1.8rem, 2vw, 1.4rem);
+    text-align: center;
+
+    height: 70vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
     }
+
+     #contact-content{
+        padding: 40px 0px 40px 0;
+     }
+
+     .contact-text{
+        display: flex;
+       flex-direction: column; 
+       align-items: center;
+        margin-top: 0px;
+        margin-bottom: 1.5rem;
+        flex: 1;
+     }
+
+     .links-links {
+        list-style: none;
+        font-size: 1.6rem;
+        padding: 10px;
+        margin-top: 10.0rem;
+        display: flex;
+        gap:30px;
+        justify-content: center;
+        text-decoration: underline;
+
+     }
+
+     .copyright {
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 400;
+        display: flex;
+         padding: 0;
+        margin-top: 3.0rem;
+        list-style: none;
+       
+     }

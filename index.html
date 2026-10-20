@@ -26,8 +26,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Italiana&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -55,7 +54,7 @@
             <li><a href="#experience">CV</a></li>
             <li><a href="#about-me">Minusta</a></li>
             <li><a href="#projects">Projektit</a></li>
-            <li><a href="#Contact">Ota yhteyttä!</a></li>
+            <li><a href="contact.html">Ota yhteyttä!</a></li>
         </ul>
         </nav>
 
@@ -316,21 +315,91 @@
     
     </div>
 
-</section>
--->
+</section>-->
+
+
+<!--Footer-->
 
 <!--Yhteystietoni ja yhteydenotto-->
+<!--Yhteystietoni ja yhteydenotto-->
+
+
+
+<footer id="footer" class="footer-section">
+  <div class="footer-content">
+
+    <div class="contactme">
+    <div class="contact-text">
+        <h2 id="contact-content">Tehdään töitä yhdessä!</h2>
+            <p class="contactText"> Ota yhteytta, mikäli voisin olla hyvä lisä tiimiinne, ota rohkeasti yhteyttä sähköpostilla!
+            </p>
+            </div> 
+    </div>
+
+    <!--Tässä lomake sähköpostiin-->
+<div class="footer-section">
+<div class="footer-container">
+
 <section id="contact" class="contact">
     <div class="contact-content">
-    <h2 id="contact-title">Ota yhteyttä!</h2>
-    <p id="contact-text">Tehdään yhdessä töitä.</p>
-    <ul class="contact-list">
-        <li>Sähköposti</li>
-        <li>Instagram</li>
-        <!--CTA: ota yhteyttä tähän-->
-    </ul>
+
+
+<!--Yhteydenottolomake-->
+<form id="contactForm" class="contact-form">
+
+<!--Tässä on Web3Forms koodi-->
+<input type="hidden" name="access_key" value="9604c854-8c30-40e8-9f72-640624a4e998">
+
+<!--Nimi-->
+ <div class="form-group">
+    <label for="name">Nimi:</label>
+    <input type="type" id="name" name="name" placeholder="Kirjoita nimesi" required>  
+ </div>
+
+<!--Sähköposti-->
+<div class="form-group">
+    <label for="email">Sähköposti:</label>
+    <input type="email" id="email" name="email" placeholder="sahkoposti@esimerkki.fi" required>
+</div>
+
+<!--Viestikohta-->
+<div class="form-group">
+    <label for="message">Jätä viesti:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Kirjoita viesti tähän..." required></textarea>
+</div>
+
+<!--Lähetä-nappi ja tila elementti-->
+<button type="submit" id="submitBtn" class="submit-btn">Lähetä viesti</button>
+<div id="formStatus" class= "form-status"></div>
+
+</form>
+
+<!--muut yhteystiedot-->
+<!--Piilota
+    <div class="some" style="margin-top: 2rem;">
+        <div id="insta" style="display: flex; align-items: center; gap: 8px">
+            <img src="insta.png" alt="instagram ikoni" style="width: 24px; height: 24px;">
+            <a href="" target="_blank">@liilalinda</a>
+
     </div>
+    </div>
+    -->
 </section>
+</div>
+</div>
+
+     <div class="links">
+        <ul class="links-links">
+        <li class="Ai"><a href="AI.html">Tekoälyn hyödyntäminen</a></li>
+        <li class="saavutettavuus">Saavutettavuus</li>
+        </ul>
+    </div>
+    <div class="copy">
+        <p class="copyright">@LindaOksanen</p>
+    </div>       
+    
+    </div>
+</footer>
 
 
 <button id="scrolltopbtn" title="Takaisin ylös" aria-label="Takaisin ylös">↑</button>
@@ -338,13 +407,13 @@
  title puolestaan parantaa käyttökokemusta, kun käyttäjä vie hiiren (nuolen) päälle niin hiiren yläpuolelle ilmestyy teksti. Tässä sama periaate kuin aria-labelissa --> 
 </div>
 
-<!--Footer-->
 
  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="script.js"></script>
 <script src="login.js"></script>
 <!-- Js väylä tulee aina bodyn alle-->
  </div>
+
 
 
 </body>
