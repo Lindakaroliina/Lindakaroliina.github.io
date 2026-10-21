@@ -148,5 +148,18 @@
         min-width: 0 !important;
 }
 
+  .footer-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: auto !important;
+    }
+
+     .links-links {
+     text-align: start;
+     gap: 1px;
+     display: flex !important;
+        flex-direction: row !important;
+     }
 
 }
